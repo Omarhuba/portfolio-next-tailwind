@@ -9,6 +9,7 @@ import {
 } from "react-icons/ai";
 import React, { use } from "react";
 import { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import omar from "../public/images/omar.png";
 import sweUyghur from "../public/images/peojects/swe-uyghur.png";
@@ -48,24 +49,24 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-gray-800 dark:bg-white min-h-screen ">
-        <section>
+      <main className="bg-gray-800 dark:bg-white min-h-screen font-serif ">
+        <section id="home">
           <nav className="p-8 flex justify-between ">
             <h1 className="text-3xl dark:text-gray-600 text-white">
               Portfolio
             </h1>
-            <ul className="flex xl:p-0">
+            <ul className="sm: flex flex-wrap pl-8 lg:flex xl:p-0">
               <li className="px-5 text-xl font-bold text-cyan-500">
-                <a href="#">Home</a>
+                <Link href={"#home"}>Home</Link>
               </li>
               <li className="px-5 text-xl font-bold text-cyan-500">
-                <a href="#">About</a>
+                <Link href={"#about"}>About</Link>
               </li>
               <li className="px-5 text-xl font-bold text-cyan-500">
-                <a href="#">Projects</a>
+                <Link href={"#projects"}>Projects</Link>
               </li>
               <li className="px-5 text-xl font-bold text-cyan-500">
-                <a href="#">Contact</a>
+                <Link href={"#contact"}>Contact</Link>
               </li>
               <li className="px-5 text-xl font-bold text-cyan-500">
                 <BsFillSunFill
@@ -87,7 +88,10 @@ export default function Home() {
           </h1>
         </div>
 
-        <section className="felx items-center felx-column text-center w-3/5 m-auto text-white">
+        <section
+          id="about"
+          className="felx items-center felx-column text-center w-3/5 m-auto text-white"
+        >
           <h1 className="text-6xl text-gray-500 p-20 ">About Me</h1>
           <Image className="rounded-full w-80 m-auto" src={omar} alt="omar" />
           <h1 className="text-4xl text-cyan-400 p-10">
@@ -106,7 +110,7 @@ export default function Home() {
             had for many years.
           </p>
         </section>
-        <section className="p-10">
+        <section id="projects" className="p-10">
           <h1 className="text-6xl text-gray-500 p-20 text-center">Projects</h1>
           <div className="lg:grid grid-cols-2 gap-8">
             <div className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10  bg-gray-100 flex-1">
@@ -119,7 +123,7 @@ export default function Home() {
                 Filuppladdning, JWT, Bcrypt, RBAC, Fullt fungerande endpoints.
               </p>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500  px-4 py-2 my-3 border-none rounded-md ">
-                VIEW CODE
+            <Link href="https://github.com/Omarhuba/Fullstack-Swe-Uyghur">VIEW CODE</Link>
               </button>
             </div>
             <div className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10  bg-gray-100 flex-1">
@@ -133,7 +137,7 @@ export default function Home() {
                 Filuppladdning, JWT, Bcrypt, RBAC, Fullt fungerande endpoints.
               </p>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500  px-4 py-2 my-3 border-none rounded-md ">
-                VIEW CODE
+            <Link href="https://github.com/Omarhuba/Backend-Slutproject-Grupp">VIEW CODE</Link>
               </button>
             </div>
             <div className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10  bg-gray-100 flex-1">
@@ -148,7 +152,7 @@ export default function Home() {
                 topplistan på de mest populära smakerna.
               </p>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500  px-4 py-2 my-3 border-none rounded-md ">
-                VIEW CODE
+            <Link href="https://github.com/Omarhuba/coldn-yumyy-express-sequelize-">VIEW CODE</Link>
               </button>
             </div>
             <div className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10  bg-gray-100 flex-1">
@@ -159,7 +163,7 @@ export default function Home() {
                 React, Man kan beställa food, add item, remove item osv
               </p>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500  px-4 py-2 my-3 border-none rounded-md ">
-                VIEW CODE
+            <Link href="https://github.com/Omarhuba/Food-Order-App-react-">VIEW CODE</Link>
               </button>
             </div>
             <div className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10  bg-gray-100 flex-1">
@@ -172,7 +176,7 @@ export default function Home() {
                 bort produkter och beställningar.
               </p>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500  px-4 py-2 my-3 border-none rounded-md ">
-                VIEW CODE
+            <Link href="https://github.com/theodorwill/Slutprojekt-Sinus-Webshop.git">VIEW CODE</Link>
               </button>
             </div>
             <div className="flex flex-col items-center text-center shadow-lg p-10 rounded-xl my-10  bg-gray-100 flex-1">
@@ -183,12 +187,12 @@ export default function Home() {
                 React, Man kan beställa food, add item, remove item osv
               </p>
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500  px-4 py-2 my-3 border-none rounded-md ">
-                VIEW CODE
+            <Link href="https://i.ibb.co/TMWYFSB/design-principer.png">VIEW CODE</Link>
               </button>
             </div>
           </div>
         </section>
-        <section>
+        <section id="skills">
           <h1 className="text-6xl text-gray-500 p-20 text-center">Skills</h1>
           <div className=" sm:flex flex-wrap justify-center lg:grid grid-cols-4 gap-12 place-items-center text-center text-white dark:text-gray-800">
             <div className="flex flex-col items-center">
@@ -200,67 +204,67 @@ export default function Home() {
               <p>CSS</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src={js} alt="html" className="pb-2"/>
+              <Image src={js} alt="html" className="pb-2" />
               <p>JavaScript</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src={vscode} alt="html" className="pb-2"/>
+              <Image src={vscode} alt="html" className="pb-2" />
               <p>VS CODE</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src={materialui} alt="html" className="pb-2"/>
+              <Image src={materialui} alt="html" className="pb-2" />
               <p>Material IU</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src={vue} alt="html" className="pb-2"/>
+              <Image src={vue} alt="html" className="pb-2" />
               <p>VUE</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src={react} alt="html" className="pb-2"/>
+              <Image src={react} alt="html" className="pb-2" />
               <p>React</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src={react} alt="html" className="pb-2"/>
+              <Image src={react} alt="html" className="pb-2" />
               <p>React Native</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src={expo} alt="html" className="pb-2"/>
+              <Image src={expo} alt="html" className="pb-2" />
               <p>Expo</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src={node} alt="html" className="pb-2"/>
+              <Image src={node} alt="html" className="pb-2" />
               <p>Node</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src={npm} alt="html" className="pb-2"/>
+              <Image src={npm} alt="html" className="pb-2" />
               <p>NPM</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src={sqlite} alt="html" className="pb-2"/>
+              <Image src={sqlite} alt="html" className="pb-2" />
               <p>Sqlite</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src={mongodb} alt="html" className="pb-2"/>
+              <Image src={mongodb} alt="html" className="pb-2" />
               <p>Mongo DB</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src={git} alt="html" className="pb-2"/>
+              <Image src={git} alt="html" className="pb-2" />
               <p>Git</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src={github} alt="html" className="pb-2"/>
+              <Image src={github} alt="html" className="pb-2" />
               <p>Github</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src={figmaa} alt="html" className="pb-2"/>
+              <Image src={figmaa} alt="html" className="pb-2" />
               <p>Figma</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src={access} alt="html" className="pb-2"/>
+              <Image src={access} alt="html" className="pb-2" />
               <p>Accessibility</p>
             </div>
             <div className="flex flex-col items-center">
-              <Image src={responsive} alt="html" className="pb-2"/>
+              <Image src={responsive} alt="html" className="pb-2" />
               <p>Responsive Design</p>
             </div>
             {/* <div className="logo">
@@ -269,7 +273,7 @@ export default function Home() {
         </div> */}
           </div>
         </section>
-        <section className=" dark:text-white">
+        <section className=" dark:text-white" id="contact">
           <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
             <h1 className="text-6xl text-cyan-400 dark:text-gray-500 pt-20 text-center">
               Contact
